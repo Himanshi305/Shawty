@@ -12,7 +12,7 @@ export default function Home() {
             </p>
             <p>we are the most straight forward in the market</p>
             <div className="flex justify-center gap-5">
-              <Link href="/generate" className="bg-white text-black font-semibold rounded-2xl p-2">
+              <Link href="/shorten" className="bg-white text-black font-semibold rounded-2xl p-2">
                 <button>Try now</button>
               </Link>
               <Link href="/github" className="bg-white text-black font-semibold rounded-2xl p-2">
