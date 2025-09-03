@@ -8,12 +8,13 @@ export default async function Page({ params }) {
   const db = client.db("shawty");
   const collection = db.collection("url");
 
-  const doc = await collection.findOne({ shorturl });
+  const doc = await collection.findOne({shorturl: shorturl})
+    if(doc){
+        redirect(doc.url)
+    }
+    else{
+        redirect(`${process.env.NEXT_PUBLIC_HOST}`)
+    }
 
-  if (doc && doc.url) {
-    redirect(doc.url);
-  }
-
-  // If not found, show an error message
-  return <div>Short URL not found.</div>;
+  return <div>My Post: {url}</div>;
 }
